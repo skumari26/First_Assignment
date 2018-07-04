@@ -1,0 +1,259 @@
+body{
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+h1 {
+    background: url(../img/Apple_Store_logo.svg.png) no-repeat;
+    text-indent: -9999px;
+    height: 36px;
+    width: 36px;
+}
+
+h2{
+    text-align: center;
+}
+
+nav{
+    background-color: black;
+}
+
+nav li{
+    display: inline;
+    padding-right: 48px;
+}
+
+nav ul a{
+    text-decoration: none;
+    color: white;
+}
+
+nav ul a:hover{
+    color: grey;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+.content{
+    display: flex;
+    height: 75vh;
+}
+
+.hero{
+    background-color: white;
+}
+.image-iphone-x{
+    display: flex;
+    background :url("../img/ar_small.jpg") no-repeat;    
+    background-size: cover;
+    height: 736px;;
+    width : 605px;
+    position: relative;
+    left:250px;
+}
+
+.hero h2,h3{
+    display: flex;
+    position: relative;
+    left: 400px;
+}
+
+.buy{
+    position: relative;
+        left: 400px;
+}
+
+header{
+        background-color: #8491A3;
+        display: flex;
+        padding-left: 22px;
+}
+
+aside{    
+    width: 20%;
+    background-color: #EDEBA0;
+}
+
+aside li{
+   display: flex;
+}
+
+main{    
+    width: 60%;
+    background-color: #8491A3;   
+}
+
+main img{
+    width: 153px;
+    height: 304px;
+    position: relative;
+    left: 128px;
+}
+
+section{    
+    width: 20%;
+    background-color: #EDEBA0;   
+}
+
+.two-column {
+    display: flex;
+}
+
+.one{
+    width: 50%;
+    background-color: brown;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    }
+
+.two{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 75vh;
+    }
+
+.first-row{
+    background-color:aqua;
+    width: 100%;
+    height: 50vh;
+}
+
+.first-row img{
+    width: 285px;
+    height: 100px;
+    position: relative;
+    right: 65px;
+    bottom: 7px;
+}
+
+.second-row{    
+    background-color:antiquewhite;
+    width: 100%;
+    height: 50vh;
+}
+
+.third-row{    
+    background-color: aquamarine;
+    width: 100%;
+    height: 50vh;
+}
+
+.one img{    
+    margin-right: 30px;
+}
+
+.preview{    
+    background-color: white;
+    width: 685px;
+    height: 47vh;
+}
+
+footer{
+    background-color: black;
+}
+
+.copyright{
+    display: flex;
+    color: white;
+    position: relative;
+    top:34px;
+}
+
+.footernav li{
+    display: inline;
+    padding-right: 30px;
+    position: relative;
+    left: 999px;
+}
+
+.footernav ul a{
+    text-decoration: none;
+    color: white;
+}
+
+.footernav ul a:hover{
+    color: grey;
+}
+
+.fa-twitter{    
+     color: white;
+}
+
+.fa-google {         
+    color: white;
+}
+
+.fa-linkedin {             
+    color: white;
+}
+
+.fa-youtube {                 
+    color: white;
+}
+
+@media(max-width: 600px){
+    .content{
+    flex-direction: column;
+    }
+    aside{
+    width: 100%;
+    }
+    section{
+    width: 100%;
+    }
+    main{
+    width: 100%;
+    }
+    .hero{
+        width: 100%;
+    }
+   .two-column aside{
+       width: 100%;
+   }
+}
+
+@media(max-width: 320px){
+    .content{
+        flex-direction: column;
+    }
+   header{
+       width:300%;
+   }
+   nav{
+       width:300%;
+   }
+   .image-iphone-x{
+       width: 193%;
+   }
+
+   aside{
+    width: 300%;
+    }
+
+   aside img{
+       width: 20%;
+   }
+
+   section{
+       width: 300%;
+   }
+
+   .two-column{
+       flex-direction: column;
+   }
+
+   .one{
+       width:300%;
+   }
+
+   .two{
+       width:200%;
+   }
+   footer{
+       width: 300%;
+   }
+}
