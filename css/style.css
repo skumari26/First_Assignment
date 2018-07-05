@@ -3,7 +3,12 @@ body{
     font-family: sans-serif;
 }
 
+*{
+     box-sizing: border-box;
+} 
+
 h1 {
+    display: flex;
     background: url(../img/Apple_Store_logo.svg.png) no-repeat;
     text-indent: -9999px;
     height: 36px;
@@ -38,7 +43,7 @@ nav ul a:hover{
 }
 .content{
     display: flex;
-    height: 75vh;
+    flex-direction: row;
 }
 
 .hero{
@@ -48,16 +53,12 @@ nav ul a:hover{
     display: flex;
     background :url("../img/ar_small.jpg") no-repeat;    
     background-size: cover;
-    height: 736px;;
-    width : 605px;
-    position: relative;
-    left:250px;
+    height: 1662px;
 }
 
 .hero h2,h3{
     display: flex;
-    position: relative;
-    left: 400px;
+    
 }
 
 .buy{
@@ -71,18 +72,22 @@ header{
         padding-left: 22px;
 }
 
-aside{    
-    width: 20%;
+aside{
+    padding-right: 5px;
+    padding-left: 5px;
+    width: 25%;
     background-color: #EDEBA0;
 }
 
-aside li{
+aside img{
    display: flex;
 }
 
 main{    
     width: 60%;
     background-color: #8491A3;   
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 main img{
@@ -93,33 +98,40 @@ main img{
 }
 
 section{    
-    width: 20%;
-    background-color: #EDEBA0;   
+    background-color: #EDEBA0;  
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .two-column {
     display: flex;
+    flex-direction: row;
 }
 
 .one{
-    width: 50%;
     background-color: brown;
     height: 75vh;
     display: flex;
     flex-direction: column;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
     }
 
 .two{
     display: flex;
     flex-direction: column;
-    width: 50%;
     height: 75vh;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
     }
 
 .first-row{
     background-color:aqua;
     width: 100%;
     height: 50vh;
+    padding-left: 5px;
 }
 
 .first-row img{
@@ -134,12 +146,14 @@ section{
     background-color:antiquewhite;
     width: 100%;
     height: 50vh;
+    padding-left: 5px;
 }
 
 .third-row{    
     background-color: aquamarine;
     width: 100%;
     height: 50vh;
+    padding-left: 5px;
 }
 
 .one img{    
@@ -147,36 +161,28 @@ section{
 }
 
 .preview{    
-    background-color: white;
-    width: 685px;
     height: 47vh;
 }
 
 footer{
+    display: flex;
     background-color: black;
 }
 
 .copyright{
-    display: flex;
     color: white;
-    position: relative;
-    top:34px;
+    padding: 50px;
 }
-
 .footernav li{
     display: inline;
-    padding-right: 30px;
-    position: relative;
-    left: 999px;
 }
 
-.footernav ul a{
+.fa{
+    padding: 20px;
+    font-size: 30px;
     text-decoration: none;
-    color: white;
-}
-
-.footernav ul a:hover{
-    color: grey;
+    margin: 5px 5px;
+    border-radius: 50%;
 }
 
 .fa-twitter{    
@@ -195,6 +201,10 @@ footer{
     color: white;
 }
 
+header,nav,aside,main,section,footer,.two-column,.one,.two, .first-row, .second-row, .third-row{
+    border : 2px grey solid;
+  }
+
 @media(max-width: 600px){
     .content{
     flex-direction: column;
@@ -209,6 +219,18 @@ footer{
     width: 100%;
     }
     .hero{
+        width: 100%;
+    }
+
+    .two-column{
+        flex-direction: column;
+    }
+
+    .one{
+        width: 100%;
+    }
+
+    .two{
         width: 100%;
     }
    .two-column aside{
@@ -227,7 +249,8 @@ footer{
        width:300%;
    }
    .image-iphone-x{
-       width: 193%;
+       width: 300%;
+       height: 1100px;
    }
 
    aside{
@@ -236,6 +259,10 @@ footer{
 
    aside img{
        width: 20%;
+   }
+
+   main{
+       width: 300%
    }
 
    section{
@@ -251,7 +278,7 @@ footer{
    }
 
    .two{
-       width:200%;
+       width:300%;
    }
    footer{
        width: 300%;
