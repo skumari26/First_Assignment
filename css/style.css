@@ -1,31 +1,16 @@
 body{
     margin: 0px;
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 *{
      box-sizing: border-box;
-} 
-
-h1 {
-    display: flex;
-    background: url(../img/Apple_Store_logo.svg.png) no-repeat;
-    text-indent: -9999px;
-    height: 36px;
-    width: 36px;
-}
-
-h2{
-    text-align: center;
 }
 
 nav{
+    display: flex;
+    flex-direction: column;
     background-color: black;
-}
-
-nav li{
-    display: inline;
-    padding-right: 48px;
 }
 
 nav ul a{
@@ -48,17 +33,18 @@ nav ul a:hover{
 
 .hero{
     background-color: white;
+    display: flex;
+    flex-direction: column;
 }
 .image-iphone-x{
-    display: flex;
-    background :url("../img/ar_small.jpg") no-repeat;    
+    background :url("../img/ar_small.jpg") no-repeat center center; 
     background-size: cover;
-    height: 1662px;
+    height: 786px;
+    padding-top: 1px;
 }
 
-.hero h2,h3{
-    display: flex;
-    
+.headline,.subhead,.buy{
+    display: inline-block;   
 }
 
 .buy{
@@ -66,41 +52,45 @@ nav ul a:hover{
         left: 400px;
 }
 
-header{
-        background-color: #8491A3;
-        display: flex;
-        padding-left: 22px;
+.logo{
+    background: url(../img/Apple_Store_logo.svg.png) no-repeat;
+    height: 36px;
 }
 
 aside{
     padding-right: 5px;
     padding-left: 5px;
-    width: 25%;
     background-color: #EDEBA0;
+    display: flex;
+    flex-direction: row-reverse;
 }
 
-aside img{
-   display: flex;
+
+aside .desc{
+    display: flex;
+    flex-direction: column;
 }
 
-main{    
-    width: 60%;
+main{
     background-color: #8491A3;   
     padding-left: 10px;
     padding-right: 10px;
-}
-
-main img{
-    width: 153px;
-    height: 304px;
-    position: relative;
-    left: 128px;
+    display: flex;
+    flex-direction: column;
 }
 
 section{    
     background-color: #EDEBA0;  
     padding-left: 5px;
     padding-right: 5px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+section .desc{
+    display: flex;
+    flex-direction: column;
+    padding-left: 5px;
 }
 
 .two-column {
@@ -110,18 +100,22 @@ section{
 
 .one{
     background-color: brown;
-    height: 75vh;
     display: flex;
     flex-direction: column;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
     }
+
+.one a{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
 
 .two{
     display: flex;
     flex-direction: column;
-    height: 75vh;
     padding-left: 5px;
     padding-right: 5px;
     padding-top: 5px;
@@ -129,39 +123,29 @@ section{
 
 .first-row{
     background-color:aqua;
-    width: 100%;
-    height: 50vh;
     padding-left: 5px;
+    display: flex;
+    flex-direction: column;
 }
 
 .first-row img{
     width: 285px;
     height: 100px;
-    position: relative;
-    right: 65px;
-    bottom: 7px;
+    margin: auto;
 }
 
 .second-row{    
     background-color:antiquewhite;
-    width: 100%;
-    height: 50vh;
     padding-left: 5px;
+    display: flex;
+    flex-direction: column;
 }
 
 .third-row{    
     background-color: aquamarine;
-    width: 100%;
-    height: 50vh;
     padding-left: 5px;
-}
-
-.one img{    
-    margin-right: 30px;
-}
-
-.preview{    
-    height: 47vh;
+    display: flex;
+    flex-direction: column;
 }
 
 footer{
@@ -172,9 +156,6 @@ footer{
 .copyright{
     color: white;
     padding: 50px;
-}
-.footernav li{
-    display: inline;
 }
 
 .fa{
@@ -202,7 +183,7 @@ footer{
 }
 
 header,nav,aside,main,section,footer,.two-column,.one,.two, .first-row, .second-row, .third-row{
-    border : 2px grey solid;
+    border : 3px grey solid;
   }
 
 @media(max-width: 600px){
@@ -229,7 +210,7 @@ header,nav,aside,main,section,footer,.two-column,.one,.two, .first-row, .second-
     .one{
         width: 100%;
     }
-
+    
     .two{
         width: 100%;
     }
@@ -242,45 +223,14 @@ header,nav,aside,main,section,footer,.two-column,.one,.two, .first-row, .second-
     .content{
         flex-direction: column;
     }
-   header{
-       width:300%;
-   }
-   nav{
-       width:300%;
-   }
-   .image-iphone-x{
-       width: 300%;
-       height: 1100px;
-   }
-
-   aside{
-    width: 300%;
-    }
-
-   aside img{
-       width: 20%;
-   }
-
-   main{
-       width: 300%
-   }
-
-   section{
-       width: 300%;
-   }
 
    .two-column{
        flex-direction: column;
    }
-
-   .one{
-       width:300%;
-   }
-
-   .two{
-       width:300%;
-   }
-   footer{
-       width: 300%;
-   }
+aside{
+   flex-direction: column;
+}
+section{
+    flex-direction: column-reverse;
+}
 }
